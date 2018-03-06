@@ -1,0 +1,62 @@
+/* @import url(https://fonts.googleapis.com/css?family=Permanent+Marker); */
+
+body { font-size: 16px;
+ font-family: 'Indie Flower', cursive;
+}
+
+main { text-align: center; }
+
+#hangman-artwork { width: 30%; }
+
+.main-headline {
+  font-family: 'Caveat Brush', cursive;
+  font-size: 2.5em;
+}
+
+/* hangman styles - default */
+
+.cls-1
+{
+  stroke: #000;
+  stroke-width: 3px;
+}
+
+#body, #Head, #left_arm, #right_arm, #left_leg, #right_leg, #right_eye, #Left_eye, #frown
+{
+  opacity: 0;
+  transition: opacity 0.3s ease-in;
+}
+.word-and-guess label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.word-and-guess input {
+  max-width: 25px;
+  border: thin dashed #333;
+  text-align: center;
+  padding: 0 10px 5px;
+  font-size: 2em;
+}
+
+.current-word {
+  font-size : 2em;
+}
+
+.show-piece { display: block !important; opacity: 1 !important; }
+
+.reset-screen {
+  display: none;
+  padding-top: 20%;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.reset-screen button { cursor: pointer; }
+
+.wrong-letters-label { display: block; margin-top: 20px; }
+.wrong-letters { font-size: 1.5em; text-decoration: line-through; }
