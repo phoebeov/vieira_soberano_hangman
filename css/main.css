@@ -13,8 +13,6 @@ main { text-align: center; }
   font-size: 2.5em;
 }
 
-/* hangman styles - default */
-
 .cls-1
 {
   stroke: #000;
@@ -26,6 +24,7 @@ main { text-align: center; }
   opacity: 0;
   transition: opacity 0.3s ease-in;
 }
+
 .word-and-guess label {
   display: block;
   margin-bottom: 10px;

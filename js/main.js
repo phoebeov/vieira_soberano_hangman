@@ -24,7 +24,7 @@
     wrongLetterList.textContent = ""; //reset wrong letters
   }
 
-  function showRestScreen() {
+  function showResetScreen() {
     // user has lost, reset stuff and start over
     //debugger;
     console.log('you loser, loser!');
