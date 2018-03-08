@@ -42,6 +42,8 @@ resetScreen.querySelector('h3').textContent = message;
       return;
     }
 
+let currentGuess = this.value;
+
     // set up the win and lose paths ( if / else )
     if (!currentWord.includes(this.value)) {
       // losing path
@@ -54,31 +56,32 @@ resetScreen.querySelector('h3').textContent = message;
       // turn on the handman piece
       document.querySelector(`.wrong${wrongGuesses}`).classList.add('show-piece');
 
-      if (wrongGuesses >= 5) {
+      if (wrongGuesses >= 9) {
+        debugger;
         // increment the wrongGuesses variable
-        showRestScreen();
+        showResetScreen();
       } else {
       // winning path
       wrongGuesses++;
     }
   }  else {
-  debugger;
-  //let matchAgainst = currentWord.split ("");
-  //var hintString= wordHint.textContent.split ("");
+  //debugger;//
+  let matchAgainst = currentWord.split ("");
+  var hintString = wordHint.textContent.split (" ");
 
-  // matchAgainst.forEach((letter, index))=> {
-  //   if (letter === currentGuess) {
-  //     hintString[index]= currentGuess;
-  //     correctGuesses++; //make sure to track correct guesses
-  //   }
-  // });
-  //
-  // wordHint.textContent = ""; // make the hint on the screen be empty//
-  // wordHint.textContent = hintString.join (" ");
-  //
-  // if (correctGuesses === currentWord.length) {
-  //   showResetScreen ();
-  // }
+  matchAgainst.forEach((letter, index) => {
+   if (letter === currentGuess) {
+     hintString[index] = currentGuess;
+    correctGuesses++; //make sure to track correct guesses
+  }
+ });
+
+ wordHint.textContent = ""; // make the hint on the screen be empty//
+ wordHint.textContent = hintString.join (" ");
+
+if (correctGuesses === currentWord.length) {
+   showResetScreen ();
+    }
   }
 }
 

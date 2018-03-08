@@ -5,6 +5,7 @@ body
   font-family: 'Architects Daughter', 'cursive', 'sans-serif';
   font-size: 20px;
   text-align: center;
+  background-color: #ffd8f1;
 }
 
 #hangman-artwork
@@ -29,7 +30,7 @@ body
 {
     from {color: #46aaff;}
     to {color: #94ff91;}
-  to{color: #fc92ca;}
+  to {color: #fc92ca;}
 }
 
 .flash
@@ -41,9 +42,6 @@ body
     animation-direction: alternate;
     animation-play-state: running;
 }
-
-
-
 
 #headerh2
 {
@@ -81,7 +79,7 @@ body
 .show-piece
 {
   display: block;
-  opacity: 1;
+  opacity: 1 !important;
 }
 
 .reset-screen
