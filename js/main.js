@@ -2,13 +2,14 @@
   console.log('hangman script fired!');
 
   // create an array to hold the words to be guessed (MDN -> arrays, MDN const)
-  const words = ["blue", "orange", "yellow", "magenta", "violet"];
+  const words = ["western", "fanshawe", "canada", "barbados", "hangman"];
 
   // set up a variable stack
   let currentWord = null,
       wordHint = document.querySelector('.current-word'),
       guessBox = document.querySelector('.guess'),
       wrongGuesses = 0,
+      correctGuesses = 0,
       resetScreen = document.querySelector('.reset-screen');
       resetButton = resetScreen.querySelector('button');
       wrongLetterList = document.querySelector('.wrong-letters'),
@@ -24,11 +25,12 @@
     wrongLetterList.textContent = ""; //reset wrong letters
   }
 
-  function showResetScreen() {
+  function showResetScreen() { // this command is a made up name. What you call it is up to you//
     // user has lost, reset stuff and start over
     //debugger;
     console.log('you loser, loser!');
     resetScreen.classList.add('show-piece');
+resetScreen.querySelector('h3').textContent = message;
   }
 
   function takeGuess() {
@@ -59,7 +61,25 @@
       // winning path
       wrongGuesses++;
     }
-  }
+  }  else {
+  debugger;
+  //let matchAgainst = currentWord.split ("");
+  //var hintString= wordHint.textContent.split ("");
+
+  // matchAgainst.forEach((letter, index))=> {
+  //   if (letter === currentGuess) {
+  //     hintString[index]= currentGuess;
+  //     correctGuesses++; //make sure to track correct guesses
+  //   }
+  // });
+  //
+  // wordHint.textContent = ""; // make the hint on the screen be empty//
+  // wordHint.textContent = hintString.join (" ");
+  //
+  // if (correctGuesses === currentWord.length) {
+  //   showResetScreen ();
+  // }
+  }
 }
 
   function init() {

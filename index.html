@@ -133,20 +133,23 @@
       </g>
       </svg>
 
-    <section class="word-and-guess">
-      <p class="current-word">
-      </p>
-      <label for="myLetter">Guess a Letter</label>
-      <input id="myLetter" maxlength="1" type="text" class="guess" pattern=[a-zA-Z]>
-      <!-- <button>Guess!</button> -->
-      <i class="wrong-letters-label">You guessed these already: </i>
-      <p class="wrong-letters"></p>
-    </section>
+<section id="rightside">
+  <section class="word-and-guess">
+    <p class="current-word">
+    </p>
+    <label for="myLetter">Guess a Letter</label>
+    <input id="myLetter" maxlength="1" type="text" class="guess" pattern=[a-zA-Z]>
+    <!-- <button>Guess!</button> -->
+    <i class="wrong-letters-label">You guessed these already: </i>
+    <p class="wrong-letters"></p>
+  </section>
 
-    <section class="reset-screen">
-      <h3>Game over. Try again!</h3>
-      <button>Start Over</button>
-    </section>
+  <section class="reset-screen">
+    <h3>Game over. Try again!</h3>
+    <button>Start Over</button>
+  </section>
+</section>
+
   </main>
 
   <script src="js/main.js"></script>
