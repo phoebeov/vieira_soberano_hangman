@@ -25,7 +25,7 @@
     wrongLetterList.textContent = ""; //reset wrong letters
   }
 
-  function showResetScreen() { // this command is a made up name. What you call it is up to you//
+  function showResetScreen(ResetGame) { // this command is a made up name. What you call it is up to you//
     // user has lost, reset stuff and start over
     //debugger;
     console.log('you loser, loser!');
@@ -56,10 +56,10 @@ let currentGuess = this.value;
       // turn on the handman piece
       document.querySelector(`.wrong${wrongGuesses}`).classList.add('show-piece');
 
-      if (wrongGuesses >= 9) {
+      if (wrongGuesses >= 8) {
         debugger;
         // increment the wrongGuesses variable
-        showResetScreen();
+        showResetScreen("You win");
       } else {
       // winning path
       wrongGuesses++;
